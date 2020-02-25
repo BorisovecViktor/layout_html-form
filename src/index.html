@@ -1,15 +1,107 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>HTML Form</title>
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-  <h1>HTML Form</h1>
+  <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" autocomplete="off"
+    onsubmit="onSubmit()" method="post">
+    <div class="container box-margin">
+      <h4 class="pers-info title-position">Personal information</h4>
+      <div class="input-margin">
+        <label for="surname">Surname:</label>
+        <input type="text" name="surname" id="surname" minlength="3">
+      </div>
+      <div class="input-margin">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" minlength="3" required>
+      </div>
+      <div class="input-margin">
+        <label for="age">How old are You?</label>
+        <input type="number" name="age" id="age" min="12" max="100" value="12">
+      </div>
+      <div class="input-margin">
+        <label for="birthday">Full date of birth:</label>
+        <input type="date" name="birthday" id="birthday">
+      </div>
+      <div class="input-margin">
+        <label for="agreement">I accept the term of the agreement</label>
+        <input type="checkbox" name="agreement" id="agreement" required>
+      </div>
+    </div>
+
+
+    <div class="container box-margin">
+      <h4 class="sign-up title-position">Registration</h4>
+      <div class="input-margin">
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" placeholder="email@example.com" required>
+      </div>
+      <div class="input-margin">
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+      </div>
+    </div>
+
+
+    <div class="container box-margin">
+      <h4 class="about-user title-position">An interesting fact about you!</h4>
+      <div class="input-margin">
+        <span>Do you love cats?</span>
+        <input type="radio" name="cats" id="yes">
+        <label for="yes">Yes</label>
+        <input type="radio" name="cats" id="no">
+        <label for="no">No</label>
+      </div>
+      <div class="input-margin">
+        <label for="color">What is your favorite color?</label>
+        <input type="color" name="color" id="color">
+      </div>
+      <div class="input-margin">
+        <label for="time">What time do you go yo bed?</label>
+        <input type="time" name="time" id="time">
+      </div>
+      <div class="input-margin">
+        <label for="car-select">What are your favorite brand of cars?</label>
+        <select name="car-select" id="car-select" size="4">
+          <option value="BMW">BMW</option>
+          <option value="Audi">Audi</option>
+          <option value="BMW">Lada</option>
+          <option value=""></option>
+        </select>
+      </div>
+      <div class="input-margin">
+        <label for="points">How do you rate our work?</label>
+        <input type="range" name="points" id="points" min="0" max="10" value="0">
+      </div>
+    </div>
+
+    <div class="container box-margin">
+      <h4 class="user-feedback title-position">Additional info:</h4>
+      <div class="input-margin">
+        <label for="feedback">Comments:</label>
+        <textarea name="feedback" id="feedback" cols="20" rows="2" maxlength="100"></textarea>
+      </div>
+      <div class="input-margin">
+        <label for="recommend">Would you recommend us?</label>
+        <select multiple size="1" name="recommend" id="recommend">
+          <option value="yes">yes</option>
+          <option value="no">no</option>
+        </select>
+      </div>
+    </div>
+    <div class="box-margin">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
   <script type="text/javascript" src="./main.js"></script>
 </body>
+
 </html>
