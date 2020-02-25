@@ -1,35 +1,8 @@
-.container {
-  border: 1px solid black;
-}
-
 .box-margin {
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 .input-margin {
-  margin: 10px;
-}
-
-.title-position {
-  margin: 0;
-  margin-left: 15px;
-  margin-top: -8px;
-  background: white;
-  font-weight: normal;
-}
-
-.pers-info {
-  width: 140px;
-}
-
-.sign-up {
-  width: 85px;
-}
-
-.about-user {
-  width: 195px;
-}
-
-.user-feedback {
-  width: 105px;
+  display: block;
+  margin-bottom: 10px;
 }

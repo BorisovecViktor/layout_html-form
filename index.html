@@ -13,93 +13,95 @@
 <body>
   <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" autocomplete="off"
     onsubmit="onSubmit()" method="post">
-    <div class="container box-margin">
-      <h4 class="pers-info title-position">Personal information</h4>
-      <div class="input-margin">
-        <label for="surname">Surname:</label>
+    <fieldset class="box-margin">
+      <legend>Personal information</legend>
+      <label class="input-margin">
+        Surname:
         <input type="text" name="surname" id="surname" minlength="3">
-      </div>
-      <div class="input-margin">
-        <label for="name">Name:</label>
+      </label>
+      <label class="input-margin">
+        Name:
         <input type="text" name="name" id="name" minlength="3" required>
-      </div>
-      <div class="input-margin">
-        <label for="age">How old are You?</label>
-        <input type="number" name="age" id="age" min="12" max="100" value="12">
-      </div>
-      <div class="input-margin">
-        <label for="birthday">Full date of birth:</label>
+      </label>
+      <label class="input-margin">
+        How old are You?
+        <input type="number" name="age" id="age" min="12" max="120" value="12">
+      </label>
+      <label class="input-margin">
+        Full date of birth:
         <input type="date" name="birthday" id="birthday">
-      </div>
-      <div class="input-margin">
-        <label for="agreement">I accept the term of the agreement</label>
+      </label>
+      <label>
+        I accept the term of the agreement
         <input type="checkbox" name="agreement" id="agreement" required>
-      </div>
-    </div>
+      </label>
+    </fieldset>
 
-
-    <div class="container box-margin">
-      <h4 class="sign-up title-position">Registration</h4>
-      <div class="input-margin">
-        <label for="email">E-mail:</label>
+    <fieldset class="box-margin">
+      <legend>Registration</legend>
+      <label class="input-margin">
+        E-mail:
         <input type="email" name="email" id="email" placeholder="email@example.com" required>
-      </div>
-      <div class="input-margin">
-        <label for="password">Password:</label>
+      </label>
+      <label>
+        Password:
         <input type="password" name="password" id="password" required>
-      </div>
-    </div>
+      </label>
+    </fieldset>
 
-
-    <div class="container box-margin">
-      <h4 class="about-user title-position">An interesting fact about you!</h4>
-      <div class="input-margin">
-        <span>Do you love cats?</span>
-        <input type="radio" name="cats" id="yes">
-        <label for="yes">Yes</label>
-        <input type="radio" name="cats" id="no">
-        <label for="no">No</label>
-      </div>
-      <div class="input-margin">
-        <label for="color">What is your favorite color?</label>
+    <fieldset class="box-margin">
+      <legend>An interesting fact about you!</legend>
+      <label class="input-margin" for="yes">
+        Do you love cats?
+        <label>
+          <input type="radio" name="cats" id="yes">
+          Yes
+        </label>
+        <label>
+          <input type="radio" name="cats" id="no">
+          No
+        </label>
+      </label>
+      <label class="input-margin">
+        What is your favorite color?
         <input type="color" name="color" id="color">
-      </div>
-      <div class="input-margin">
-        <label for="time">What time do you go yo bed?</label>
-        <input type="time" name="time" id="time">
-      </div>
-      <div class="input-margin">
-        <label for="car-select">What are your favorite brand of cars?</label>
-        <select name="car-select" id="car-select" size="4">
+      </label>
+      <label class="input-margin">
+        What time do you go yo bed?
+        <input type="time" name="time-to-bed" id="time-to-bed">
+      </label>
+      <label class="input-margin">
+        What are your favorite brand of cars?
+        <select name="favorite-car" id="favorite-car" size="4">
           <option value="BMW">BMW</option>
           <option value="Audi">Audi</option>
           <option value="BMW">Lada</option>
           <option value=""></option>
         </select>
-      </div>
-      <div class="input-margin">
-        <label for="points">How do you rate our work?</label>
+      </label>
+      <label>
+        How do you rate our work?
         <input type="range" name="points" id="points" min="0" max="10" value="0">
-      </div>
-    </div>
+      </label>
+    </fieldset>
 
-    <div class="container box-margin">
-      <h4 class="user-feedback title-position">Additional info:</h4>
-      <div class="input-margin">
-        <label for="feedback">Comments:</label>
+    <fieldset class="box-margin">
+      <legend>Additional info:</legend>
+      <label class="input-margin">
+        Comments:
         <textarea name="feedback" id="feedback" cols="20" rows="2" maxlength="100"></textarea>
-      </div>
-      <div class="input-margin">
-        <label for="recommend">Would you recommend us?</label>
-        <select multiple size="1" name="recommend" id="recommend">
+      </label>
+      <label>
+        Would you recommend us?
+        <select size="1" name="recommendation" id="recommendation">
           <option value="yes">yes</option>
           <option value="no">no</option>
         </select>
-      </div>
-    </div>
-    <div class="box-margin">
-      <button type="submit">Submit</button>
-    </div>
+      </label>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+
   </form>
   <script type="text/javascript" src="./main.js"></script>
 </body>
